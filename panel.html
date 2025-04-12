@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel de Control</title>
+  <link rel="stylesheet" href="css/panel.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+      <li class="active" onclick="mostrarContenido('perfil')">Perfil</li>
+      <li onclick="mostrarContenido('inventario')">Inventario</li>
+      <li onclick="mostrarContenido('configuracion')">Configuración</li>
+      <li onclick="cerrarSesion()">Cerrar Sesión</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div id="perfil" class="contenido visible">
+      <h1>Bienvenido Admin</h1>
+      <p>Información personal y ajustes de usuario.</p>
+    </div>
+    <div id="inventario" class="contenido">
+      <h1>Inventario</h1>
+      <p>Lista y control de productos.</p>
+    </div>
+    <div id="configuracion" class="contenido">
+      <h1>Configuración</h1>
+      <p>Ajustes del sistema y preferencias.</p>
+    </div>
+  </div>
+
+  <!-- Mensaje de cerrando sesión -->
+  <div id="mensaje-cerrando" class="mensaje-cerrando">
+    <div class="mensaje-box">
+      <p>Cerrando sesión...</p>
+    </div>
+  </div>
+
+  <script src="/js/panel.js"></script>
+</body>
+</html>

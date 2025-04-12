@@ -12,6 +12,8 @@
   <div class="header d-flex justify-content-between align-items-center p-4 fs-5 text-white bg-dark">
     <span class="fs-3 fw-bold">Inventario de Motos - MotoRoyal</span>
     <button class="btn btn-outline-light" onclick="cerrarSesion()">Cerrar sesión</button>
+  <!-- Encabezado con botón de Dashboard -->
+  <button class="btn btn-outline-light" onclick="dashboard()">Dashboard</button>
   </div>
 
   <div class="container mt-4">
@@ -261,6 +263,11 @@
       localStorage.clear(); // borra la "sesión"
       window.location.href = "index.html"; // redirige al login
     }
+    // 🔐 Botón de dashboard
+    function dashboard() { // borra la "sesión"
+      window.location.href = "panel.html"; // redirige al login
+    }
+
 
     window.onload = cargarInventario;
   </script>
